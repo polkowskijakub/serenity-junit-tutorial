@@ -8,19 +8,19 @@ import org.openqa.selenium.WebDriver;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SerenityJUnit5Extension.class)
-class WhenSearchingByKeyword {
+class LoggingTests {
 
     @Managed(driver = "chrome", options = "headless")
     WebDriver driver;
 
     NavigateActions navigate;
-    SearchActions search;
-    SearchResultSidebar searchResultSidebar;
+    LoginActions login;
+    LoginResults loginResults;
 
     @Test
-    void theKeywordShouldAppearInTheResultsSidebar() {
+    void theLoginHasWrongValue() {
         navigate.toTheDuckDuckGoSearchPage();
-        search.byKeyword("Cucumber");
-        assertThat(searchResultSidebar.heading()).isEqualTo("Cucumber");
+        login.byKeyword("y0d7@nykredit.dk");
+        assertThat(loginResults.errorMsg()).isEqualTo("Login incorrect.");
     }
 }
