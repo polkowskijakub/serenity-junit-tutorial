@@ -1,4 +1,4 @@
-package starter.duckduckgo;
+package starter.qasongs;
 
 import net.serenitybdd.core.pages.PageComponent;
 
