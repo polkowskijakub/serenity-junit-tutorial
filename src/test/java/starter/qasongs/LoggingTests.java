@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ExtendWith(SerenityJUnit5Extension.class)
 class LoggingTests {
 
-    @Managed(driver = "chrome", options = "headless")
+    @Managed(driver = "chrome")
     WebDriver driver;
 
     NavigateActions navigate;
