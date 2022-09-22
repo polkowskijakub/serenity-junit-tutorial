@@ -20,7 +20,7 @@ class LoggingTests {
     @Test
     void theLoginHasWrongValue() {
         navigate.toTheDuckDuckGoSearchPage();
-        login.byKeyword("y0d7@nykredit.dk");
+        login.byKeyword("aaa@wp.pl");
         assertThat(loginResults.errorMsg()).isEqualTo("Login incorrect.");
     }
 }
